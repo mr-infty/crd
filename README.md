@@ -20,11 +20,21 @@ from within the Sage REPL. The you can e.g. run
     d2.kernel()
 
 If you are specifically interested in computing the cohomology of all
-almost-simple semisimple root data up to rank eight, simply run
+almost-simple semisimple root data up to rank eight, first edit `Makefile` and
+change the line
+    
+    SAGE = /Applications/SageMath/sage
+    
+to reflect the location of your Sage executable; for example, if you installed
+Sage via a packet manager,
+
+    SAGE = sage
+    
+should be fine. After you've edited `Makefile` apppropriately, simply run
 
     make
 
-If you are interested in the cohomology of a specific root datum, e.g. do
+Note that this computation will probably take a day to finish. If you are interested in the cohomology of a specific root datum, e.g. do
 
     sage main.py D 4
     sage main.py A 2 3
